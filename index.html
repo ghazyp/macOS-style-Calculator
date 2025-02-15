@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <!-- Row 1 (Scientific Functions) -->
+            <button class="function" onclick="appendCharacter('(')">(</button>
+            <button class="function" onclick="appendCharacter(')')">)</button>
+            <button class="function" onclick="memoryStore()">mc</button>
+            <button class="function" onclick="memoryAdd()">m+</button>
+            <button class="function" onclick="memorySubtract()">m-</button>
+            <button class="function" onclick="memoryRecall()">mr</button>
+
+            <!-- Row 2 (Scientific Functions) -->
+            <button class="function" onclick="power(2)">x²</button>
+            <button class="function" onclick="power(3)">x³</button>
+            <button class="function" onclick="powerY()">xʸ</button>
+            <button class="function" onclick="exp()">eˣ</button>
+            <button class="function" onclick="appendCharacter('10**')">10ˣ</button>
+            <button class="operator" onclick="appendCharacter('/')">÷</button>
+
+            <!-- Row 3 (Numbers & Operators) -->
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('9')">9</button>
+            <button class="operator" onclick="appendCharacter('*')">×</button>
+            <button class="operator" onclick="appendCharacter('%')">%</button>
+            <button class="clear" onclick="clearDisplay()">AC</button>
+
+            <!-- Row 4 -->
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('6')">6</button>
+            <button class="operator" onclick="appendCharacter('-')">−</button>
+            <button class="function" onclick="toggleSign()">+/−</button>
+            <button class="function" onclick="randomNumber()">Rand</button>
+
+            <!-- Row 5 -->
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('3')">3</button>
+            <button class="operator" onclick="appendCharacter('+')">+</button>
+            <button class="function" onclick="appendCharacter('π')">π</button>
+            <button class="function" onclick="appendCharacter('e')">e</button>
+
+            <!-- Row 6 -->
+            <button class="zero" onclick="appendCharacter('0')">0</button>
+            <button onclick="appendCharacter('.')">.</button>
+            <button class="operator" onclick="calculateResult()">=</button>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
